@@ -11,7 +11,6 @@ session_start();
 class apitest extends apiBaseClass
 {
 
-    //http://www.example.com/?apitest.game={"TestParamOne":"fff"}
     function game($apiMethodParams)
     {
         $retJSON = $this->createDefaultJson();
