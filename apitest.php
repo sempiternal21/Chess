@@ -36,6 +36,75 @@ class apitest extends apiBaseClass
             {
                 echo "Номер хода: " . $_SESSION['count'];
                 echo " Матч идет <br>";
+                echo "Фигуры белых:<br>";
+                foreach($_SESSION['board'] as $v1){
+                    foreach($v1 as $v2){
+                        if($v2->team == 2){
+                            switch($v2->position2){
+                                case 0:
+                                    $p1 = 'a';
+                                    break;
+                                case 1:
+                                    $p1 = 'b';
+                                    break;
+                                case 2:
+                                    $p1 = 'c';
+                                    break;
+                                case 3:
+                                    $p1 = 'd';
+                                    break;
+                                case 4:
+                                    $p1 = 'e';
+                                    break;
+                                case 5:
+                                    $p1 = 'f';
+                                    break;
+                                case 6:
+                                    $p1 = 'g';
+                                    break;
+                                case 7:
+                                    $p1 = 'h';
+                                    break;
+                            }
+                            echo $v2->name . ' ' . $p1 . (abs(8-$v2->position1)) . "<br>";
+                        }
+                    }
+                }
+                echo "Фигуры черных:<br>";
+                foreach($_SESSION['board'] as $v1){
+                    foreach($v1 as $v2){
+                        if($v2->team == 1){
+                            switch($v2->position2){
+                                case 0:
+                                    $p1 = 'a';
+                                    break;
+                                case 1:
+                                    $p1 = 'b';
+                                    break;
+                                case 2:
+                                    $p1 = 'c';
+                                    break;
+                                case 3:
+                                    $p1 = 'd';
+                                    break;
+                                case 4:
+                                    $p1 = 'e';
+                                    break;
+                                case 5:
+                                    $p1 = 'f';
+                                    break;
+                                case 6:
+                                    $p1 = 'g';
+                                    break;
+                                case 7:
+                                    $p1 = 'h';
+                                    break;
+                            }
+                            echo $v2->name . ' ' . $p1 . (abs(8-$v2->position1)) . "<br>";
+                        }
+                    }
+                }
+                
                 echo '<pre>';
                 var_dump($_SESSION['board']);
                 echo '</pre>';

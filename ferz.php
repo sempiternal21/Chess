@@ -53,6 +53,7 @@ class ferz extends figure
             }
             if ($_SESSION['board'][$p1][$p2] != '')
             {
+            	$_SESSION['board'][$p1][$p2]->live = 0;
                 echo "Вы срубили ферзем вражескую фигуру<br>";
             }
             return true;
