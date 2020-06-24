@@ -16,9 +16,9 @@ class apitest extends apiBaseClass
     {
         $retJSON = $this->createDefaultJson();
 
-        if (isset($apiMethodParams->TestParamOne))
+        if (isset($apiMethodParams->param))
         {
-            $retJSON->retParameter = $apiMethodParams->TestParamOne;
+            $retJSON->retParameter = $apiMethodParams->param;
         }
         else
         {
